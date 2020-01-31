@@ -1,0 +1,15 @@
+<project name = "server" basedir = "." default = "build">
+<target name = "build" description = "Compile WebServer.java and WebWorker.java">
+	<javac srcdir = "." destdir = "."/>
+</target>
+<target name= "clean">
+	<delete>
+		<fileset dir= "." includes = "*.class"/>
+	</delete>
+</target>
+<target name = "run" depends = "build">
+	<java classname = "WebServer" fork = "true">
+</java>
+</target>
+</project>
+
